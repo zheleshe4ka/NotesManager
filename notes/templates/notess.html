@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block notes %}
+<div class="large-8 columns"
+{% for notes in notess%}
+	<h3><a href="/notes/get/{{ notes.id }}/">{{notes.notes_title}}</a></h3>
+	<p><b><i>{{notes.notes_text}}</i></b></p>	
+	<h5>{{notes.notes_date}} </h5>
+	<h6><i>{{notes.notes_category}}</i></h6>
+	<hr>
+{% endfor %}
+<input class="button" type="submit" value="Добавить">
+
+{% endblock %}

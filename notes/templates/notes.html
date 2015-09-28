@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block notes %}
+	<div class="large-7 columns"
+	<h4>{{notes.notes_date}}</h4>
+	<h2>{{notes.notes_title}}</h2>
+	<div class = "large-offset-1 large-8 columns"
+	<p>{{notes.notes_text}}</p>
+	<input class="button" type="submit" value="Удалить">
+	<input class="button" type="submit" value="Изменить">
+	</div>
+	<hr>
+{% endblock %}
